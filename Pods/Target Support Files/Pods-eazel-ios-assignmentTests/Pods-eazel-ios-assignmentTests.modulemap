@@ -1,0 +1,6 @@
+framework module Pods_eazel_ios_assignmentTests {
+  umbrella header "Pods-eazel-ios-assignmentTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
