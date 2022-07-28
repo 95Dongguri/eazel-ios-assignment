@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if Auth.auth().currentUser == nil {
             let vc = LoginViewController()
+            
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
         } else {

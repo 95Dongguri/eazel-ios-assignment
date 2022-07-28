@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 라이트모드 & 다크모드 변환 설정
 func AppearanceCheck(_ viewController: UIViewController) {
     guard let appearance = UserDefaults.standard.string(forKey: "Appearance") else { return }
 

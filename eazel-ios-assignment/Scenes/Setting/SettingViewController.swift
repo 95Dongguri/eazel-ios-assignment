@@ -9,10 +9,9 @@ import SnapKit
 import UIKit
 
 class SettingViewController: UIViewController {
+    let viewModel = SettingViewModel()
     
     let appearnceArray = ["Device", "Light", "Dark"]
-    
-    let viewModel = SettingViewModel()
     
     private lazy var userLabel: UILabel = {
         let label = UILabel()
@@ -57,7 +56,6 @@ class SettingViewController: UIViewController {
 }
 
 private extension SettingViewController {
-    
     /// 레이아웃 설정
     func setupLayout() {
         [
@@ -86,12 +84,12 @@ private extension SettingViewController {
         }
     }
     
-    /// 로그인 버튼 탭
+    /// 로그아웃 버튼 탭
     @objc func tapLogoutButton() {
         viewModel.logout(self)
     }
     
-    /// 화면모드 변환 컨트롤 탭
+    /// 라이트모드 & 다크모드 변환 컨트롤 탭
     @objc func tapAppearanceControl() {
         viewModel.changeAppearance(appearanceControl)
         self.viewWillAppear(true)

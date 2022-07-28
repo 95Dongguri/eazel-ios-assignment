@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// 탭 뷰 컨트롤러 보여주기
 func showTabVC() {
     let tabVC = TabBarViewController()
 

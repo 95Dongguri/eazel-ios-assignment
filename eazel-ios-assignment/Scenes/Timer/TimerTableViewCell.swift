@@ -9,12 +9,12 @@ import SnapKit
 import UIKit
 
 class TimerTableViewCell: UITableViewCell {
-    
     static let identifier = "TimerTableViewCell"
     
     let indexLabel = UILabel()
     let labtimeLabel = UILabel()
     
+    /// 셀 구성요소 설정
     func setup(_ index: Int, _ lab: String) {
         [
             indexLabel,

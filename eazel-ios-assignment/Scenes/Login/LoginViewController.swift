@@ -10,7 +10,6 @@ import SnapKit
 import UIKit
 
 class LoginViewController: UIViewController {
-    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Stop Watch"
@@ -45,6 +44,7 @@ class LoginViewController: UIViewController {
 }
 
 private extension LoginViewController {
+    /// 레이아웃 설정
     func setupLayout() {
         [
             titleLabel,
@@ -63,6 +63,7 @@ private extension LoginViewController {
         }
     }
     
+    /// 로그인 버튼 탭
     @objc func tapLoginButton() {
         GIDSignIn.sharedInstance().signIn()
     }

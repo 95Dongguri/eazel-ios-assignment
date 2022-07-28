@@ -11,11 +11,10 @@ import SnapKit
 import UIKit
 
 class TimerViewController: UIViewController {
+    let viewModel = TimerViewModel()
     
     private let mainTimer: StopWatch = StopWatch()
     private let labTimer: StopWatch = StopWatch()
-    
-    let viewModel = TimerViewModel()
     
     private var isPlaying: Bool = false
     private var labList: [String] = []
@@ -210,6 +209,7 @@ private extension TimerViewController {
             RunLoop.current.add(labTimer.timer, forMode: RunLoop.Mode.common)
             
             isPlaying = true
+            
             viewModel.changeButton(startpauseButton, title: "중단", titleColor: UIColor.red)
         } else {
             mainTimer.timer.invalidate()
