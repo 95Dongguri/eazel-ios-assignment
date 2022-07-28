@@ -31,11 +31,16 @@ class TimerViewModel {
         label.text = minutes + ":" + seconds
     }
     
+    /// 타이머 중지
+    func invalidateTimer(_ stopwatch: StopWatch) {
+        stopwatch.timer.invalidate()
+    }
+    
     /// 타이머 초기화
     func resetTimer(_ stopwatch: StopWatch, label: UILabel) {
         stopwatch.timer.invalidate()
         stopwatch.count = 0.0
-        label.text = "00:00:00"
+        label.text = "00:00.00"
     }
     
 // MARK: UI 함수

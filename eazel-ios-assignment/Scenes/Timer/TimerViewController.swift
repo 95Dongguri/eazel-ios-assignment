@@ -66,6 +66,8 @@ class TimerViewController: UIViewController {
     private lazy var labsTableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = 50.0
+        tableView.separatorColor = .lightGray
+        tableView.separatorInset.left = 2.0
         tableView.register(TimerTableViewCell.self, forCellReuseIdentifier: TimerTableViewCell.identifier)
         
         tableView.dataSource = self
@@ -217,9 +219,8 @@ private extension TimerViewController {
             
             viewModel.changeButton(startpauseButton, title: "중단", titleColor: UIColor.red)
         } else {
-            mainTimer.timer.invalidate()
-            labTimer.timer.invalidate()
-            
+            viewModel.invalidateTimer(mainTimer)
+            viewModel.invalidateTimer(labTimer)
             viewModel.setUserDB(mainTimer.count, labList)
             
             isPlaying = false
