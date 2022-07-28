@@ -86,7 +86,7 @@ private extension SettingViewController {
         }
     }
     
-    /// 로그인버튼 탭
+    /// 로그인 버튼 탭
     @objc func tapLogoutButton() {
         viewModel.logout(self)
     }

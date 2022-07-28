@@ -78,6 +78,11 @@ class TimerViewController: UIViewController {
         super.viewWillAppear(animated)
         
         AppearanceCheck(self)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         getUserCurrentDB()
         getUserLabDB()
         setupLayout()

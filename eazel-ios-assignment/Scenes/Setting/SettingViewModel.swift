@@ -32,7 +32,7 @@ class SettingViewModel {
     func changeAppearance(_ appearanceControl: UISegmentedControl) {
         switch appearanceControl.selectedSegmentIndex {
         case 0:
-            UserDefaults.standard.set("System", forKey: "Appearance")
+            UserDefaults.standard.set("Light", forKey: "Appearance")
         case 1:
             UserDefaults.standard.set("Light", forKey: "Appearance")
         case 2:
