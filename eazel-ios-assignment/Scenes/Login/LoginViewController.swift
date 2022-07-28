@@ -5,7 +5,6 @@
 //  Created by 김동혁 on 2022/07/27.
 //
 
-//import FirebaseAuth
 import GoogleSignIn
 import SnapKit
 import UIKit
@@ -42,9 +41,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
-        
-        /// 로그인 완료 체크 후 뷰 넘기는 로직
-//        NotificationCenter.default.addObserver(self, selector: #selector(checkSign), name: NSNotification.Name("Login"), object: nil)
     }
 }
 
@@ -70,8 +66,4 @@ private extension LoginViewController {
     @objc func tapLoginButton() {
         GIDSignIn.sharedInstance().signIn()
     }
-    
-//    @objc func checkSign() {
-//        showTabVCOnNav(self)
-//    }
 }

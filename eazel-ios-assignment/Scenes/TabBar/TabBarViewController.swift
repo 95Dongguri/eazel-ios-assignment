@@ -15,7 +15,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewWillAppear(animated)
         
         AppearanceCheck(self)
-        self.selectedIndex = 0
     }
     
     override func viewDidLoad() {

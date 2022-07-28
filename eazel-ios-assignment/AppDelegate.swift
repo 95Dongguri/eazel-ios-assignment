@@ -39,9 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         guard let authentication = user.authentication else { return }
         
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-        
-//        NotificationCenter.default.post(name: Notification.Name("Login"), object: nil, userInfo: nil)
-        
+                
         Auth.auth().signIn(with: credential) { _, _ in
             showTabVC()
         }

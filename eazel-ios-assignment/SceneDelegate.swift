@@ -19,18 +19,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if Auth.auth().currentUser == nil {
             let vc = LoginViewController()
-//            let nav = UINavigationController(rootViewController: vc)
+            window?.rootViewController = vc
+            window?.makeKeyAndVisible()
+        } else {
+            let vc = TabBarViewController()
 
             window?.rootViewController = vc
             window?.makeKeyAndVisible()
-//            window?.backgroundColor = .systemBackground
-        } else {
-            let vc = TabBarViewController()
-//            let nav = UINavigationController(rootViewController: vc)
-//            showTabVC()
-            window?.rootViewController = vc
-            window?.makeKeyAndVisible()
-//            window?.backgroundColor = .systemBackground
         }
     }
 }

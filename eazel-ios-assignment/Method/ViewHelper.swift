@@ -13,11 +13,3 @@ func showTabVC() {
     tabVC.modalPresentationStyle = .fullScreen
     UIApplication.shared.windows.first?.rootViewController?.show(tabVC, sender: nil)
 }
-
-//func showTabVCOnNav(_ vc: UIViewController) {
-//    let tabVC = TabBarViewController()
-//
-//    vc.modalPresentationStyle = .fullScreen
-//    vc.navigationController?.show(tabVC, sender: nil)
-//    vc.navigationController?.isNavigationBarHidden = true
-//}

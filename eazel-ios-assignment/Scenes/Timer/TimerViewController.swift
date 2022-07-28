@@ -14,6 +14,9 @@ class TimerViewController: UIViewController {
     
     private let mainTimer: StopWatch = StopWatch()
     private let labTimer: StopWatch = StopWatch()
+    
+    let viewModel = TimerViewModel()
+    
     private var isPlaying: Bool = false
     private var labList: [String] = []
     
@@ -29,7 +32,7 @@ class TimerViewController: UIViewController {
         return label
     }()
     
-    let labLabel = UILabel()
+    private lazy var labLabel = UILabel()
     
     private lazy var labresetButton: UIButton = {
         let button = UIButton()
@@ -82,6 +85,7 @@ class TimerViewController: UIViewController {
 }
 
 private extension TimerViewController {
+    /// 레이아웃 설정
     func setupLayout() {
         [
             timerLabel,
@@ -118,50 +122,14 @@ private extension TimerViewController {
         }
     }
     
-    func changeButton(_ button: UIButton, title: String, titleColor: UIColor) {
-        button.setTitle(title, for: UIControl.State())
-        button.setTitleColor(titleColor, for: UIControl.State())
-    }
-    
-    func resetTimer(_ stopwatch: StopWatch, label: UILabel) {
-        stopwatch.timer.invalidate()
-        stopwatch.count = 0.0
-        label.text = "00:00:00"
-    }
-    
-    func updateTimer(_ stopwatch: StopWatch, label: UILabel) {
-        stopwatch.count = stopwatch.count + interval
-        
-        var minutes: String = "\((Int)(stopwatch.count / 60))"
-        if (Int)(stopwatch.count / 60) < 10 {
-            minutes = "0\((Int)(stopwatch.count / 60))"
-        }
-        
-        var seconds: String = String(format: "%.2f", (stopwatch.count.truncatingRemainder(dividingBy: 60)))
-        if stopwatch.count.truncatingRemainder(dividingBy: 60) < 10 {
-            seconds = "0" + seconds
-        }
-        
-        label.text = minutes + ":" + seconds
-    }
-    
     func resetMainTimer() {
-        resetTimer(mainTimer, label: timerLabel)
+        viewModel.resetTimer(mainTimer, label: timerLabel)
         labList.removeAll()
         labsTableView.reloadData()
     }
     
     func resetLabTimer() {
-        resetTimer(labTimer, label: labLabel)
-    }
-    
-    func resetUserDB() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-
-        let ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "LabData")
-        
-        ref.child("\(uid)").removeValue()
+        viewModel.resetTimer(labTimer, label: labLabel)
     }
     
     func getUserCurrentDB() {
@@ -176,7 +144,7 @@ private extension TimerViewController {
             self.mainTimer.count = current
             
             DispatchQueue.main.async { [self] in
-                self.updateTimer(mainTimer, label: timerLabel)
+                self.viewModel.updateTimer(mainTimer, label: timerLabel)
             }
         }
     }
@@ -199,37 +167,25 @@ private extension TimerViewController {
         }
     }
     
-    func setUserDB(_ current: Double,_ lab: [String]) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        let ref: DatabaseReference!
-        ref = Database.database().reference(withPath: "LabData")
-        
-        let userLabRef = ref.child("\(uid)").child("Lab")
-        let userCurrentRef = ref.child("\(uid)").child("Current")
-        
-        userLabRef.setValue(lab)
-        userCurrentRef.setValue(current)
-    }
-    
     @objc func tapLabResetButton() {
         if !isPlaying {
             resetMainTimer()
             resetLabTimer()
-            resetUserDB()
-            changeButton(labresetButton, title: "랩", titleColor: UIColor.lightGray)
+            
+            viewModel.resetUserDB()
+            viewModel.changeButton(labresetButton, title: "랩", titleColor: UIColor.lightGray)
+            
             labresetButton.isEnabled = false
         } else {
             if let labText = labLabel.text {
                 labList.insert(labText, at: 0)
             }
-//            if let currentText = timerLabel.text {
-//                setUserDB(currentText, labList)
-//            }
-            setUserDB(mainTimer.count, labList)
-//            setUserDB(labs)
+
+            viewModel.setUserDB(mainTimer.count, labList)
             labsTableView.reloadData()
+            
             resetLabTimer()
+            
             labTimer.timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(updateLabTimer), userInfo: nil, repeats: true)
             RunLoop.current.add(labTimer.timer, forMode: RunLoop.Mode.common)
         }
@@ -239,38 +195,40 @@ private extension TimerViewController {
     @objc func tapStartPauseButton() {
         labresetButton.isEnabled = true
         
-        changeButton(labresetButton, title: "랩", titleColor: UIColor.white)
-        
+        viewModel.changeButton(labresetButton, title: "랩", titleColor: UIColor.white)
+
         if !isPlaying {
             mainTimer.timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(updateMainTimer), userInfo: nil, repeats: true)
             labTimer.timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(updateLabTimer), userInfo: nil, repeats: true)
-            
+
             RunLoop.current.add(mainTimer.timer, forMode: RunLoop.Mode.common)
             RunLoop.current.add(labTimer.timer, forMode: RunLoop.Mode.common)
             
             isPlaying = true
-            changeButton(startpauseButton, title: "중단", titleColor: UIColor.red)
+            viewModel.changeButton(startpauseButton, title: "중단", titleColor: UIColor.red)
         } else {
             mainTimer.timer.invalidate()
             labTimer.timer.invalidate()
             
-            setUserDB(mainTimer.count, labList)
+            viewModel.setUserDB(mainTimer.count, labList)
             
             isPlaying = false
-            changeButton(startpauseButton, title: "시작", titleColor: UIColor.systemBlue)
-            changeButton(labresetButton, title: "재설정", titleColor: UIColor.white)
+
+            viewModel.changeButton(startpauseButton, title: "시작", titleColor: UIColor.systemBlue)
+            viewModel.changeButton(labresetButton, title: "재설정", titleColor: UIColor.white)
         }
     }
     
     @objc func updateMainTimer() {
-        updateTimer(mainTimer, label: timerLabel)
+        viewModel.updateTimer(mainTimer, label: timerLabel)
     }
     
     @objc func updateLabTimer() {
-        updateTimer(labTimer, label: labLabel)
+        viewModel.updateTimer(labTimer, label: labLabel)
     }
 }
 
+// MARK: - UITableView DataSource
 extension TimerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return labList.count
@@ -280,8 +238,9 @@ extension TimerViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TimerTableViewCell.identifier, for: indexPath) as? TimerTableViewCell else { return UITableViewCell() }
         
         let lab = labList[indexPath.row]
+        let index = labList.count - indexPath.row
         
-        cell.setup(labList.count - indexPath.row, lab)
+        cell.setup(index, lab)
         
         return cell
     }

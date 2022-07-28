@@ -20,6 +20,7 @@
 		CE17C1A828904C8C001E34CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17C1A728904C8C001E34CA /* LoginViewController.swift */; };
 		CE17C1AA28904D11001E34CA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17C1A928904D11001E34CA /* TabBarViewController.swift */; };
 		CE360AC12892674C00F3C1EE /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360AC02892674C00F3C1EE /* SettingViewModel.swift */; };
+		CE360AC4289283A200F3C1EE /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE360AC3289283A200F3C1EE /* TimerViewModel.swift */; };
 		CE3D8D5D2890B8DC008805F9 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D5C2890B8DC008805F9 /* TabBarItem.swift */; };
 		CE3D8D5F2890B942008805F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D5E2890B942008805F9 /* TimerViewController.swift */; };
 		CE3D8D612890B94A008805F9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D602890B94A008805F9 /* SettingViewController.swift */; };
@@ -69,6 +70,7 @@
 		CE17C1A728904C8C001E34CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE17C1A928904D11001E34CA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CE360AC02892674C00F3C1EE /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		CE360AC3289283A200F3C1EE /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		CE3D8D5C2890B8DC008805F9 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		CE3D8D5E2890B942008805F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		CE3D8D602890B94A008805F9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3D8D5E2890B942008805F9 /* TimerViewController.swift */,
+				CE360AC3289283A200F3C1EE /* TimerViewModel.swift */,
 				CE4687802891194500C8BE41 /* TimerTableViewCell.swift */,
 			);
 			path = Timer;
@@ -528,6 +531,7 @@
 				CE17C1AA28904D11001E34CA /* TabBarViewController.swift in Sources */,
 				CE17C1A828904C8C001E34CA /* LoginViewController.swift in Sources */,
 				CE3D8D5D2890B8DC008805F9 /* TabBarItem.swift in Sources */,
+				CE360AC4289283A200F3C1EE /* TimerViewModel.swift in Sources */,
 				CE4687812891194500C8BE41 /* TimerTableViewCell.swift in Sources */,
 				CE3D8D672890E168008805F9 /* AppearanceCheck.swift in Sources */,
 				CE049E6828904069009A748A /* AppDelegate.swift in Sources */,

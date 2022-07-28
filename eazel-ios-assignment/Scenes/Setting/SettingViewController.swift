@@ -5,7 +5,6 @@
 //  Created by 김동혁 on 2022/07/27.
 //
 
-//import FirebaseAuth
 import SnapKit
 import UIKit
 
@@ -58,6 +57,8 @@ class SettingViewController: UIViewController {
 }
 
 private extension SettingViewController {
+    
+    /// 레이아웃 설정
     func setupLayout() {
         [
             userLabel,
@@ -67,9 +68,6 @@ private extension SettingViewController {
             view.addSubview($0)
         }
         
-//        guard let user = Auth.auth().currentUser?.displayName else { return }
-//
-//        userLabel.text = "\(user) 님 환영합니다!!"
         viewModel.updateUser(userLabel)
         
         userLabel.snp.makeConstraints {
@@ -88,30 +86,13 @@ private extension SettingViewController {
         }
     }
     
+    /// 로그인버튼 탭
     @objc func tapLogoutButton() {
-//        let firebaseAuth = Auth.auth()
-//
-//        do {
-//            try firebaseAuth.signOut()
-//            presentingViewController?.dismiss(animated: true)
-//            navigationController?.popToRootViewController(animated: true)
-//        } catch let signOutError as NSError {
-//            print("Error: signout \(signOutError.localizedDescription)")
-//        }
         viewModel.logout(self)
     }
     
+    /// 화면모드 변환 컨트롤 탭
     @objc func tapAppearanceControl() {
-//        switch appearanceControl.selectedSegmentIndex {
-//        case 0:
-//            UserDefaults.standard.set("Light", forKey: "Appearance")
-//        case 1:
-//            UserDefaults.standard.set("Light", forKey: "Appearance")
-//        case 2:
-//            UserDefaults.standard.set("Dark", forKey: "Appearance")
-//        default:
-//            return
-//        }
         viewModel.changeAppearance(appearanceControl)
         self.viewWillAppear(true)
     }
