@@ -126,16 +126,19 @@ private extension TimerViewController {
         }
     }
     
+    /// 메인 타이머 초기화
     func resetMainTimer() {
         viewModel.resetTimer(mainTimer, label: timerLabel)
         labList.removeAll()
         labsTableView.reloadData()
     }
     
+    /// 랩 타이머 초기화
     func resetLabTimer() {
         viewModel.resetTimer(labTimer, label: labLabel)
     }
     
+    /// 유저의 최근 타이머시간 불러오기
     func getUserCurrentDB() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
 
@@ -153,6 +156,7 @@ private extension TimerViewController {
         }
     }
     
+    /// 유저의 랩 타임 불러오기
     func getUserLabDB() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
@@ -171,6 +175,7 @@ private extension TimerViewController {
         }
     }
     
+    /// 랩 리셋 버튼 탭
     @objc func tapLabResetButton() {
         if !isPlaying {
             resetMainTimer()
@@ -195,7 +200,7 @@ private extension TimerViewController {
         }
     }
     
-    
+    /// 시작 중단 버튼 탭
     @objc func tapStartPauseButton() {
         labresetButton.isEnabled = true
         
@@ -224,10 +229,12 @@ private extension TimerViewController {
         }
     }
     
+    /// 메인 타이머 업데이트
     @objc func updateMainTimer() {
         viewModel.updateTimer(mainTimer, label: timerLabel)
     }
     
+    /// 랩 타이머 업데이트
     @objc func updateLabTimer() {
         viewModel.updateTimer(labTimer, label: labLabel)
     }
