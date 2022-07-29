@@ -7,9 +7,8 @@
 
 import FirebaseAuth
 import FirebaseDatabase
-import UIKit
 
-class TimerViewModel {
+struct TimerViewModel {
     /// 인터벌 설정
     let interval = 0.01
 

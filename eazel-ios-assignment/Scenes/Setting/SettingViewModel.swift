@@ -7,7 +7,7 @@
 
 import FirebaseAuth
 
-class SettingViewModel {
+struct SettingViewModel {
     /// 로그아웃
     func logout(_ vc: UIViewController) {
         let firebaseAuth = Auth.auth()

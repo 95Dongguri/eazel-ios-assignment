@@ -14,7 +14,6 @@
 		CE049E6A28904069009A748A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE049E6928904069009A748A /* SceneDelegate.swift */; };
 		CE049E712890406A009A748A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE049E702890406A009A748A /* Assets.xcassets */; };
 		CE049E742890406A009A748A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE049E722890406A009A748A /* LaunchScreen.storyboard */; };
-		CE049E7F2890406A009A748A /* eazel_ios_assignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE049E7E2890406A009A748A /* eazel_ios_assignmentTests.swift */; };
 		CE049E892890406A009A748A /* eazel_ios_assignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE049E882890406A009A748A /* eazel_ios_assignmentUITests.swift */; };
 		CE049E8B2890406A009A748A /* eazel_ios_assignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE049E8A2890406A009A748A /* eazel_ios_assignmentUITestsLaunchTests.swift */; };
 		CE17C1A828904C8C001E34CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17C1A728904C8C001E34CA /* LoginViewController.swift */; };
@@ -30,6 +29,7 @@
 		CE4687812891194500C8BE41 /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4687802891194500C8BE41 /* TimerTableViewCell.swift */; };
 		CE4687842891211200C8BE41 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE4687832891211200C8BE41 /* SnapKit */; };
 		CEAE0B0728938FAC00C1CBDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */; };
+		CEAE0B112893B9EC00C1CBDE /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE0B102893B9EC00C1CBDE /* SettingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		CE049E732890406A009A748A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE049E752890406A009A748A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE049E7A2890406A009A748A /* eazel-ios-assignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eazel-ios-assignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE049E7E2890406A009A748A /* eazel_ios_assignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eazel_ios_assignmentTests.swift; sourceTree = "<group>"; };
 		CE049E842890406A009A748A /* eazel-ios-assignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "eazel-ios-assignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE049E882890406A009A748A /* eazel_ios_assignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eazel_ios_assignmentUITests.swift; sourceTree = "<group>"; };
 		CE049E8A2890406A009A748A /* eazel_ios_assignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eazel_ios_assignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		CE46877E2891180300C8BE41 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		CE4687802891194500C8BE41 /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
 		CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEAE0B102893B9EC00C1CBDE /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		D224DF6DA41F5FD5DEBC95BC /* Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D69FBDADFB03FB2F794EA7D0 /* Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3A5F629AB0087C3B3D899FD /* Pods_eazel_ios_assignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eazel_ios_assignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +178,7 @@
 		CE049E7D2890406A009A748A /* eazel-ios-assignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE049E7E2890406A009A748A /* eazel_ios_assignmentTests.swift */,
+				CEAE0B0D2893B10600C1CBDE /* Tests */,
 			);
 			path = "eazel-ios-assignmentTests";
 			sourceTree = "<group>";
@@ -245,6 +245,14 @@
 				CE3D8D642890DEAF008805F9 /* ViewHelper.swift */,
 			);
 			path = Methods;
+			sourceTree = "<group>";
+		};
+		CEAE0B0D2893B10600C1CBDE /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CEAE0B102893B9EC00C1CBDE /* SettingViewModelTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +336,7 @@
 					};
 					CE049E792890406A009A748A = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = CE049E6328904069009A748A;
 					};
 					CE049E832890406A009A748A = {
@@ -548,7 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE049E7F2890406A009A748A /* eazel_ios_assignmentTests.swift in Sources */,
+				CEAE0B112893B9EC00C1CBDE /* SettingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,15 +773,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B4SNVYSL93;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DongHyeok.eazel-ios-assignmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eazel-ios-assignment.app/eazel-ios-assignment";
@@ -785,11 +801,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B4SNVYSL93;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DongHyeok.eazel-ios-assignmentTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
