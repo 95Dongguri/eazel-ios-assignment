@@ -24,12 +24,12 @@
 		CE3D8D5D2890B8DC008805F9 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D5C2890B8DC008805F9 /* TabBarItem.swift */; };
 		CE3D8D5F2890B942008805F9 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D5E2890B942008805F9 /* TimerViewController.swift */; };
 		CE3D8D612890B94A008805F9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D602890B94A008805F9 /* SettingViewController.swift */; };
-		CE3D8D632890BAE2008805F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE3D8D622890BAE2008805F9 /* GoogleService-Info.plist */; };
 		CE3D8D652890DEAF008805F9 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D642890DEAF008805F9 /* ViewHelper.swift */; };
 		CE3D8D672890E168008805F9 /* AppearanceCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D8D662890E168008805F9 /* AppearanceCheck.swift */; };
 		CE46877F2891180300C8BE41 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46877E2891180300C8BE41 /* StopWatch.swift */; };
 		CE4687812891194500C8BE41 /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4687802891194500C8BE41 /* TimerTableViewCell.swift */; };
 		CE4687842891211200C8BE41 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE4687832891211200C8BE41 /* SnapKit */; };
+		CEAE0B0728938FAC00C1CBDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +74,11 @@
 		CE3D8D5C2890B8DC008805F9 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		CE3D8D5E2890B942008805F9 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		CE3D8D602890B94A008805F9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		CE3D8D622890BAE2008805F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE3D8D642890DEAF008805F9 /* ViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		CE3D8D662890E168008805F9 /* AppearanceCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCheck.swift; sourceTree = "<group>"; };
 		CE46877E2891180300C8BE41 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		CE4687802891194500C8BE41 /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
+		CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D224DF6DA41F5FD5DEBC95BC /* Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D69FBDADFB03FB2F794EA7D0 /* Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3A5F629AB0087C3B3D899FD /* Pods_eazel_ios_assignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eazel_ios_assignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,11 +165,11 @@
 				CE049E6928904069009A748A /* SceneDelegate.swift */,
 				CE46877E2891180300C8BE41 /* StopWatch.swift */,
 				CE3D8D5C2890B8DC008805F9 /* TabBarItem.swift */,
-				CE360AC228927BF000F3C1EE /* Method */,
+				CE360AC228927BF000F3C1EE /* Methods */,
 				CE17C1AB28904E57001E34CA /* Scenes */,
 				CE049E702890406A009A748A /* Assets.xcassets */,
 				CE049E722890406A009A748A /* LaunchScreen.storyboard */,
-				CE3D8D622890BAE2008805F9 /* GoogleService-Info.plist */,
+				CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */,
 				CE049E752890406A009A748A /* Info.plist */,
 			);
 			path = "eazel-ios-assignment";
@@ -238,13 +238,13 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		CE360AC228927BF000F3C1EE /* Method */ = {
+		CE360AC228927BF000F3C1EE /* Methods */ = {
 			isa = PBXGroup;
 			children = (
 				CE3D8D662890E168008805F9 /* AppearanceCheck.swift */,
 				CE3D8D642890DEAF008805F9 /* ViewHelper.swift */,
 			);
-			path = Method;
+			path = Methods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,8 +365,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE049E742890406A009A748A /* LaunchScreen.storyboard in Resources */,
+				CEAE0B0728938FAC00C1CBDE /* GoogleService-Info.plist in Resources */,
 				CE049E712890406A009A748A /* Assets.xcassets in Resources */,
-				CE3D8D632890BAE2008805F9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
