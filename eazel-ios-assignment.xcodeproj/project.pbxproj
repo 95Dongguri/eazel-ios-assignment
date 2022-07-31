@@ -28,8 +28,8 @@
 		CE46877F2891180300C8BE41 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE46877E2891180300C8BE41 /* StopWatch.swift */; };
 		CE4687812891194500C8BE41 /* TimerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4687802891194500C8BE41 /* TimerTableViewCell.swift */; };
 		CE4687842891211200C8BE41 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE4687832891211200C8BE41 /* SnapKit */; };
+		CE5CE91D2896935400232790 /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5CE91C2896935400232790 /* SettingViewModelTests.swift */; };
 		CEAE0B0728938FAC00C1CBDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */; };
-		CEAE0B112893B9EC00C1CBDE /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE0B102893B9EC00C1CBDE /* SettingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +77,8 @@
 		CE3D8D662890E168008805F9 /* AppearanceCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceCheck.swift; sourceTree = "<group>"; };
 		CE46877E2891180300C8BE41 /* StopWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		CE4687802891194500C8BE41 /* TimerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTableViewCell.swift; sourceTree = "<group>"; };
+		CE5CE91C2896935400232790 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		CEAE0B0628938FAC00C1CBDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CEAE0B102893B9EC00C1CBDE /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		D224DF6DA41F5FD5DEBC95BC /* Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D69FBDADFB03FB2F794EA7D0 /* Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests/Pods-eazel-ios-assignment-eazel-ios-assignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3A5F629AB0087C3B3D899FD /* Pods_eazel_ios_assignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eazel_ios_assignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,7 +250,7 @@
 		CEAE0B0D2893B10600C1CBDE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CEAE0B102893B9EC00C1CBDE /* SettingViewModelTests.swift */,
+				CE5CE91C2896935400232790 /* SettingViewModelTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -557,7 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEAE0B112893B9EC00C1CBDE /* SettingViewModelTests.swift in Sources */,
+				CE5CE91D2896935400232790 /* SettingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
